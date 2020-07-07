@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChatComponent } from './components/chat/chat.component';
 
 
 const routes: Routes = [
-  //{ path: 'heroe/:id', component: HeroeComponent, data: { titulo: 'Heroe' }},
+  { path: 'chat', component: ChatComponent, data: { titulo: 'Firechat App' }},
   //{ path: 'heroes', component: HeroesComponent, data: { titulo: 'Heroes' } },
-  //{ path: '**', pathMatch: 'full', redirectTo: '/heroes' },
-  //{ path: '', pathMatch: 'full', redirectTo: '/heroes' },
+  { path: '**', pathMatch: 'full', redirectTo: '/chat' },
+  { path: '', pathMatch: 'full', redirectTo: '/chat' },
 ];
 
 @NgModule({

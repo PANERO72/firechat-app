@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 .main-container{
   margin-top: 40px;
   margin-bottom: 150px;
@@ -8,21 +14,57 @@
   cursor: pointer;
 }
 
+.ms-20 {
+  margin: 20px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
 
 .chat-window{
   padding: 10px;
-  width: 300px;
-  height: 400px;
+  /* width: 300px; */
+  width: 400px;
+  /* height: 400px; */
+  height: 500px;
   overflow: hidden;
   border: 1px solid #4080FF;
   border-radius: 20px;
 }
 
 .app-mensajes{
-  overflow-y:scroll;
-  height:270px;
+  overflow-y:auto;
+  /* height:270px; */
+  height:350px;
   /*background:gray;*/
+  background-color: beige;
   padding: 5px;
+}
+
+.message {
+  width: auto;
+  padding: 0px;
+  /* margin: 0px; */
+}
+
+.message-body {
+  width: auto;
+  margin: 0px;
+  color: #000;
+  background-color: #ffffff91;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 0px;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  /* text-align: center; */
+  /* white-space: nowrap; */
+  /* vertical-align: baseline; */
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 

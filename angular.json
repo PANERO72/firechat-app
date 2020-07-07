@@ -14,7 +14,13 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "devextreme-angular",
+				      "devextreme",
+				      "@firebase",
+				      "@angular/fire",
+				      "devexpress-richedit",
+				      "x-data-spreadsheet"
            ],
             "outputPath": "dist/firechat-app",
             "index": "src/index.html",
@@ -32,7 +38,6 @@
               "./node_modules/animate.css/animate.min.css"
             ],
             "scripts": [           
-              "./node_modules/popper.js/dist/esm/popper.min.js",
               "./node_modules/tether/dist/js/tether.min.js",
               "./node_modules/@fortawesome/fontawesome-free/js/all.js"
             ]

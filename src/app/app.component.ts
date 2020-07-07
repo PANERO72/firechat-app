@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { ChatService } from "./services/chat.service";
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
   public chats: Observable<any[]>;
   
-  constructor(firestore: AngularFirestore, private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title) {
+  constructor(firestore: AngularFirestore, private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title, public chatService: ChatService) {
     this.chats = firestore.collection('chats').valueChanges();
   }
 
