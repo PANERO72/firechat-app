@@ -34,7 +34,11 @@ export class ChatService {
   }
 
   login(proveedor: string) {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    if(proveedor === 'google'){
+      this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    }else{
+      this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
+    }
   }
   logout() {
     this.usuario = {};
@@ -59,7 +63,7 @@ export class ChatService {
 
   agregarMensaje(texto: string){
     let mensaje: Mensaje = {
-      nombre: 'Demo', mensaje: texto, fecha: new Date().getTime()
+      nombre: this.usuario.nombre, mensaje: texto, fecha: new Date().getTime(), uid: this.usuario.uid
     }
 
     return this.itemsCollection.add(mensaje);
